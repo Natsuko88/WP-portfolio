@@ -102,6 +102,10 @@ li {
     display: flex;
     align-items: center;
   }
+  .p-gnav-ul .c-gnav-li a {
+    display: block;
+    line-height: 70px;
+  }
 }
 .c-wrapper {
   max-width: 1024px;
@@ -124,7 +128,7 @@ li {
 }
 
 .p-tophead {
-  background-image: url(../../../img/bonnie-kittle-5US9_Gep0qY-unsplash.jpg);
+  background-image: url(../img/bonnie-kittle-5US9_Gep0qY-unsplash.jpg);
   height: 500px;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -214,23 +218,15 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 360px;
-  max-height: 500px;
 }
 .swiper-wrapper.swiper-slide img {
   display: block;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-/*pc*/
-@media screen and (min-width: 1025px) {
-  .swipwe-wrapper.swiper-slide {
-    max-width: 1000px;
-  }
-}
 /*sp*/
 .p-card--blog {
   display: grid;
@@ -287,19 +283,13 @@ li {
 }
 
 .swiper {
-  max-width: 480px;
+  width: 100%;
   height: 100%;
 }
 .swiper .swiper-button-next, .swiper .swiper-button-prev {
   color: #462101;
 }
 
-/*pc*/
-@media screen and (min-width: 1025px) {
-  .swiper {
-    max-width: 1024px;
-  }
-}
 /*ハンバーガーボタン*/
 .p-hbutton {
   display: block;
@@ -376,11 +366,17 @@ li {
   .p-skills .p-skill-icon {
     grid-template-columns: repeat(3, minmax(150px, 1fr));
   }
+  .p-skills .p-skill-icon i {
+    font-size: 7rem;
+  }
 }
 /*pc*/
 @media screen and (min-width: 1025px) {
   .p-skills .p-skill-icon {
     grid-template-columns: repeat(3, minmax(240px, 1fr));
+  }
+  .p-skills .p-skill-icon i {
+    font-size: 10rem;
   }
 }
 /*foundation*/

@@ -21,6 +21,10 @@
     .p-skills{
         .p-skill-icon{
             grid-template-columns: repeat(3,minmax(150px,1fr));
+
+        i{
+            font-size:7rem;
+        }
         }
     }
 
@@ -30,6 +34,10 @@
     .p-skills{
         .p-skill-icon{
             grid-template-columns: repeat(3,minmax(240px,1fr));
+
+        i{
+            font-size:10rem;
+        }
         }
     }
 }
