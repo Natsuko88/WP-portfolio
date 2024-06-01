@@ -28,6 +28,11 @@
     &::after{
         top:70%;
     }
+
+    &:hover{
+        opacity: 1;
+        transform: unset;
+    }
     
 }
 

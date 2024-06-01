@@ -11,7 +11,7 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="l-header p-header">
-    <div class="c-wrapper">
+    <div class="u-wrapper">
         <div class="p-header-title">
             <img class="c-icon" src="<?php echo esc_url(get_template_directory_uri() .'/img/icon-bgnon.png'); ?>">
             <h1 class="c-logo">
@@ -26,16 +26,16 @@
             <nav class="p-gnav">
                 <ul class="p-gnav-ul">
                     <li class="c-gnav-li">
-                        <a href="#about">About</a>
+                        <a href="<?php echo esc_url(home_url('/#about')); ?>">About</a>
                     </li>
                     <li class="c-gnav-li">
-                        <a href="#works">Works</a>
+                        <a href="<?php echo esc_url(home_url('/#works')); ?>">Works</a>
                     </li>
                     <li class="c-gnav-li">
-                        <a href="#contact">Contact</a>
+                        <a href="<?php echo esc_url(home_url('/#blog')); ?>">Blog</a>
                     </li>
                     <li class="c-gnav-li">
-                        <a href="#blog">Blog</a>
+                        <a href="<?php echo esc_url('/contact/'); ?>">Contact</a>
                     </li>
                 </ul>
             </nav>

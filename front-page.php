@@ -7,10 +7,10 @@
             </h2>
         </div> 
     </section>
-    <section id="about" class="p-sec-contents p-sec-contents--about">
+    <section id="about" class="p-sec-contents p-sec-contents--about c-wrapper">
         <h2 class="c-sec-title">About</h2>
         <div class="p-card--about">
-            <img class="c-author-img" src="<?php echo esc_url(get_template_directory_uri(). '/img/author.png'); ?>">
+            <img class="c-author-img" src="<?php echo esc_url(get_template_directory_uri(). '/img/author2.png'); ?>">
             <p>
                 埼玉県出身。２児の母。<br>
                 地方公務員として、16年間教育行政に携わる（2024年3月退職）。<br>
@@ -27,46 +27,41 @@
             </div>
         </div>
     </section>
-    <section id="works" class="p-sec-contents">
+    <section id="works" class="p-sec-contents c-wrapper">
         <h2 class="c-sec-title">Works</h2>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
+            <!--サブループ-->
+            <?php
+                //$argsのプロパティを変更することでカスタマイズ
+                $args = array(
+                'post_type' => 'works',
+                'no_found_rows' => true
+                );
+                $wp_query_array = new WP_Query( $args ); 
+            ?>
+              <div class="swiper-slide">
+                <?php
+                    if ( $wp_query_array -> have_posts() ) :
+                    while ( $wp_query_array -> have_posts() ) : $wp_query_array -> the_post();
+                ?>
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail(); ?>
+                    <h4 class="c-title--sub"><?php the_title(); ?></h4>
+                    <?php the_excerpt(); ?>
+                </a>
+                </div>
+            <?php
+            endwhile;?>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
         </div>
     </section>
-    <section id="contact" class="p-sec-contents">
-        <h2 class="c-sec-title">Contact</h2>
-        <div class="p-form--contact">
-            <form action="#">
-                <div class="c-form">
-                    <label for="name">お名前</label>
-                    <input type="text" id="name" name="your-name">
-                </div>
-                <div class="c-form">
-                    <label for="e-mail">メールアドレス</label>
-                    <input type="email" id="email" name="your-email">
-                </div>
-                <div class="c-form">
-                    <label for="message">メッセージ</label>
-                    <textarea id="message" name="your-message"></textarea>
-                </div>
-                <input type="submit" class="c-button" value="送信">
-            </form>
-        </div>
-    </section>
-    <section id="blog" class="p-sec-contents">
+    <section id="blog" class="p-sec-contents c-wrapper">
         <h2 class="c-sec-title">Blog</h2>
         <section class="p-card--blog">
             <!--メインループ-->
@@ -76,9 +71,9 @@
                         the_post(); ?>
             <!--繰り返す部分-->
             <article class="c-card--article">
-                <?php the_title(); ?>
+                <h4 class="c-title--sub"><?php the_title(); ?></h4>
                 <?php the_date(); ?>
-                <?php the_category(); ?>
+                <!--<?php the_category(); ?>-->
                 <?php the_excerpt(); ?> 
                 <button class="c-button">
                     <a href="<?php the_permalink();?>">
@@ -92,6 +87,17 @@
             ?><p>表示する記事がありません</p><?php
             endif; ?>
         </section>
+    </section>
+    <section id="contact" class="p-sec-contents c-wrapper">
+            <h2 class="c-sec-title">Contact</h2>
+            <div class="p-form--contact">
+                <button class="c-button">
+                <a href="<?php echo esc_url('/contact/'); ?>">
+                <h3 class="c-subtitle">お問い合わせはこちらから</h3>
+                </a>
+                </button>
+                <p>回答に２〜３日お時間をいただく場合がございます。</p>
+            </div>
     </section>
 </main>
 <?php get_footer(); ?>
