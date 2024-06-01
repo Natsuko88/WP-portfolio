@@ -1,7 +1,7 @@
 <?php
 add_theme_support( 'post-thumbnails' );//アイキャッチ画像の表示
 
-function natsukoportfolio_script(){
+function natsukosportfolio_script(){
     wp_enqueue_style('ress','https://unpkg.com/ress/dist/ress.min.css',array());
     wp_enqueue_style('nportfolio',get_template_directory_uri().'/css/style.css',array(),'1.0.0'); 
     wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.0.0' );
@@ -10,7 +10,7 @@ function natsukoportfolio_script(){
     wp_enqueue_script('mjs',get_template_directory_uri().'/js/main.js',array(),'1.0.0',true);
     wp_enqueue_script('swiperjs','https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',array(),true);
 }
-add_action('wp_enqueue_scripts','natsukoportfolio_script');
+add_action('wp_enqueue_scripts','natsukosportfolio_script');
 
 function add_post_type_event() {
 	register_post_type(
