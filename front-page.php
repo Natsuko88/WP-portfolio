@@ -12,10 +12,11 @@
         <div class="p-card--about">
             <img class="c-author-img" src="<?php echo esc_url(get_template_directory_uri(). '/img/author2.png'); ?>">
             <p>
-                埼玉県出身。２児の母。<br>
-                地方公務員として、16年間教育行政に携わる（2024年3月退職）。<br>
-                定年後も続けたい仕事を探すため、オンラインスクールRaiseTechでWordPress副業コースを受講し、完走。<br>
-                Webサイト制作とプログラミングの面白さに気づいて、フロントエンドエンジニアを目指して勉強を続けている。
+                コーダーです。<br>
+                お客様の大切なデザインを正確にWebサイトで再現します。<br>
+                SassやFLOCSSを取り入れて、CSSの管理を効率的にしています。<br>
+                Git,Githubを活用したコード管理ができます。<br>
+                HTMLで作られたサイトをWordPress化して、サイトの更新を簡単にするお手伝いができます。<br>
             </p>
         </div>
         <div class="p-skills">

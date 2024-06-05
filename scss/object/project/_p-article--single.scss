@@ -9,5 +9,11 @@
     p{
         margin:3% 0;
         line-height: 2;
+        display:inline-block;
+        
+        .alignleft{
+            margin-right: 10px;
+        }
+
     }
 }

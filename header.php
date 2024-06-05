@@ -6,10 +6,10 @@
     <meta name="description" content="フロントエンドエンジニアを目指すNatsukoのポートフォリオ">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://kit.fontawesome.com/deba4cbadf.js" crossorigin="anonymous"></script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <header class="l-header p-header">
     <div class="u-wrapper">
         <div class="p-header-title">

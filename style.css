@@ -10,4 +10,15 @@ License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Copyright notice: GNU General Public License
 Text Domain: natsukosportfolio
+Tested up to:6.5
+Requires PHP: 6.0
 */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}

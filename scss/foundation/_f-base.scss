@@ -32,3 +32,49 @@ a{
 li{
     list-style: none;
 }
+
+//WP独自のクラス
+.wp-caption {
+    margin: auto;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .wp-caption-text {
+    display: inline-block;
+    text-align: left;
+    color: #8a8a8a;
+    margin: 10px 0 0;
+  }
+
+  .sticky {
+    /* 固定表示を囲むブロック要素をスタイリング */
+    margin:auto;
+  }
+  
+  .sticky h2 {
+    /* 固定表示のタイトルをスタイリング */
+    margin:auto;
+  }
+  .gallery-caption{
+    margin:auto;
+    text-align: center;
+    max-width: 100%;
+  }
+
+.bypostauthor{
+    margin:auto;
+    text-align: center;
+    max-width: 100%;
+}
+.alignright {
+    margin:auto;
+}
+
+.alignleft{
+    margin: auto;
+}
+
+.aligncenter{
+    margin: auto;
+}
