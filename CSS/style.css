@@ -311,6 +311,12 @@ li {
 /*tab*/
 @media screen and (min-width: 480px) {
   .p-card--blog {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+  }
+}
+/*pc*/
+@media screen and (min-width: 1025px) {
+  .p-card--blog {
     grid-template-columns: repeat(3, minmax(240px, 1fr));
   }
 }

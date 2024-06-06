@@ -36,6 +36,13 @@
 /*tab*/
 @include v.tab{
     .p-card--blog{
+        grid-template-columns: repeat(3,minmax(160px,1fr));
+    }
+}
+
+/*pc*/
+@include v.pc{
+    .p-card--blog{
         grid-template-columns: repeat(3,minmax(240px,1fr));
     }
 }
