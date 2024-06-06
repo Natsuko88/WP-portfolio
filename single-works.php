@@ -11,8 +11,7 @@
         <div class="p-postdate">
             <?php echo esc_html(get_the_date()); ?>
         </div>
-        <div <?php post_class(); ?>> 
-        </div>
+        <div <?php post_class(); ?>> </div>
         <?php the_content(); ?>
     </article>
     <?php wp_link_pages(); ?>
