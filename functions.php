@@ -33,3 +33,14 @@ function natsukosportfolio_theme_setup(){
     load_theme_textdomain( 'natsukosportfolio', get_template_directory() . '/languages' );
     }
 add_action( 'after_setup_theme', 'natsukosportfolio_theme_setup' );
+
+//アーカイブ
+function post_has_archive($args, $post_type){
+    if('post'== $post_type){
+      $args['rewrite']=true;
+      $args['has_archive']='post';
+    }
+    return $args;
+  }
+  
+  add_filter('register_post_type_args', 'post_has_archive', 10, 2);

@@ -29,7 +29,7 @@
         </div>
     </section>
     <section id="works" class="p-sec-contents c-wrapper">
-        <h2 class="c-sec-title">Works</h2>
+        <h2 class="c-sec-title"><a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>">Works</a></h2>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
             <!--サブループ-->
@@ -63,7 +63,7 @@
         </div>
     </section>
     <section id="blog" class="p-sec-contents c-wrapper">
-        <h2 class="c-sec-title">Blog</h2>
+        <h2 class="c-sec-title"><a href="<?php echo esc_url(home_url()); ?>/post">Blog</a></h2>
         <section class="p-card--blog">
             <!--メインループ-->
             <?php

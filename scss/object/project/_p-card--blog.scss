@@ -10,7 +10,7 @@
     
 
     .c-card--article{
-        max-width:500px;
+        max-width:360px;
         background-color: v.$color-paleblue;
         padding:30px;
         box-shadow: 2px 2px 10px v.$color-darkblue;
@@ -29,6 +29,14 @@
             align-items: center;
             margin: 20px 0;
         }
+
+        img{
+            display: block;
+            max-width: 320px;
+            max-height: 240px;
+            object-fit: cover;
+            margin:0 auto;
+        }
     }
     
 }
@@ -37,6 +45,13 @@
 @include v.tab{
     .p-card--blog{
         grid-template-columns: repeat(3,minmax(160px,1fr));
+
+        .c-card--article{
+            img{
+                max-width: 100px;
+                max-height: 75px;
+            }
+        }
     }
 }
 
@@ -44,5 +59,12 @@
 @include v.pc{
     .p-card--blog{
         grid-template-columns: repeat(3,minmax(240px,1fr));
+
+        .c-card--article{
+            img{
+                max-width: 240px;
+                max-height: 180px;
+            }
+        }
     }
 }
